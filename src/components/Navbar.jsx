@@ -6,7 +6,7 @@ const Navbar = () => {
   const [menuIcon, setMenuIcon] = useState(false);
 
   return (
-    <div>
+    <>
       <button className="nav-open-btn" onClick={() => setMenuIcon(!menuIcon)}>
         <ion-icon name="menu-outline"></ion-icon>
       </button>
@@ -17,7 +17,12 @@ const Navbar = () => {
         </button>
 
         <a href="#home" className="logo">
-          <img src={logo} alt="logo" onClick={() => setMenuIcon(false)} />
+          <img
+            src={logo}
+            alt="logo"
+            style={{ width: "190px", height: "50px" }}
+            onClick={() => setMenuIcon(false)}
+          />
         </a>
 
         <ul className="navbar-list">
@@ -61,10 +66,10 @@ const Navbar = () => {
       </nav>
 
       <div
-        class={menuIcon ? "overlay active" : "overlay"}
+        className={menuIcon ? "overlay active" : "overlay"}
         onClick={() => setMenuIcon(false)}
       ></div>
-    </div>
+    </>
   );
 };
 
