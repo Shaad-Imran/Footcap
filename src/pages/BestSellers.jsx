@@ -24,17 +24,10 @@ const BestSellers = () => {
         </ul>
 
         <ul className="product-list">
-          {productList[0].links.map((item, index) => {
+          {productList[0].links.map((currItem, index) => {
             return (
               <li key={index} className="product-item">
-                <ProductCard
-                  img={item.img}
-                  gender={item.gender}
-                  title={item.title}
-                  badge={item.badge}
-                  badgeValue={item.badgeTitle}
-                  price={item.price}
-                />
+                <ProductCard {...currItem} />
               </li>
             );
           })}

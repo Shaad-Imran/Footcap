@@ -10,7 +10,7 @@ const Collection = () => {
           {collectionList.map((list, index) => {
             return (
               <li key={index}>
-                <CollectionCard img={list.image} category={list.category} />
+                <CollectionCard {...list} />
               </li>
             );
           })}

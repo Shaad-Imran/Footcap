@@ -30,17 +30,10 @@ const NikeSpecial = () => {
             <span className="line"></span>
           </h2>
           <ul className="has-scrollbar">
-            {productList[1].links.map((item, index) => {
+            {productList[1].links.map((currItem, index) => {
               return (
                 <li key={index} className="product-item">
-                  <ProductCard
-                    img={item.img}
-                    gender={item.gender}
-                    title={item.title}
-                    badge={item.badge}
-                    badgeValue={item.badgeTitle}
-                    price={item.price}
-                  />
+                  <ProductCard {...currItem} />
                 </li>
               );
             })}

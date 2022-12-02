@@ -1,18 +1,13 @@
 import React from "react";
 import { cardActionBtnList } from "../constants";
 
-const ProductCard = ({ img, gender, title, badge, badgeValue, price }) => {
+const ProductCard = ({ img, gender, title, badge, badgeTitle, price }) => {
   return (
     <div className="product-card" tabIndex="0">
       <figure className="card-banner">
-        <img
-          src={img}
-          // style={{ width: "312px", height: "350px", loading: "lazy" }}
-          alt={title}
-          className="image-contain"
-        />
+        <img src={img} alt={title} className="image-contain" />
 
-        {badge && <div className="card-badge">{badgeValue}</div>}
+        {badge && <div className="card-badge">{badgeTitle}</div>}
 
         <ul className="card-action-list">
           {cardActionBtnList.map((list, index) => {

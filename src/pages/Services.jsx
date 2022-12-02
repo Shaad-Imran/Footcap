@@ -1,4 +1,5 @@
 import React from "react";
+import ServiceCard from "../components/ServiceCard";
 import { serviceList } from "../constants";
 
 const Services = () => {
@@ -6,29 +7,8 @@ const Services = () => {
     <section className="section service">
       <div className="container">
         <ul className="service-list">
-          {serviceList.map((list, index) => {
-            return (
-              <li className="service-item" key={index}>
-                <div className="service-card">
-                  <div className="card-icon">
-                    <img
-                      src={list.img}
-                      style={{ width: "53px", height: "28px", loading: "lazy" }}
-                      alt="Service icon"
-                    />
-                  </div>
-
-                  <div>
-                    <h3 className="h4 card-title">{list.title}</h3>
-
-                    <p className="card-text">
-                      {list.text}{" "}
-                      {list.price && <span> {list.priceValue}</span>}
-                    </p>
-                  </div>
-                </div>
-              </li>
-            );
+          {serviceList.map((currItem, index) => {
+            return <ServiceCard key={index} {...currItem} />;
           })}
         </ul>
       </div>
