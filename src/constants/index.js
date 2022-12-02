@@ -28,28 +28,24 @@ import {
 
 export const navBarLinks = [
   {
-    id: "home",
+    path: "/",
     title: "Home",
   },
   {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "products",
+    path: "/products",
     title: "Products",
   },
   {
-    id: "shop",
-    title: "Shop",
+    path: "/bestsellers",
+    title: "BestSellers",
   },
   {
-    id: "blog",
-    title: "Blog",
+    path: "/todayspecial",
+    title: "Today's Special",
   },
   {
-    id: "contact",
-    title: "Contact",
+    path: "/services",
+    title: "Services",
   },
 ];
 

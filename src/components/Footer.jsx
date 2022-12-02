@@ -43,7 +43,7 @@ const Footer = () => {
                   <ion-icon name="location"></ion-icon>
 
                   <span className="footer-link-text">
-                    2751 S Parker Rd, Aurora, CO 80014, United States
+                    Trade Centre, South Tukoganj, Indore - 452001, Lad C
                   </span>
                 </address>
               </li>

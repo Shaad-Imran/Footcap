@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { logo } from "../assets";
 import Navbar from "./Navbar";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [visible, setVisible] = useState(false);
@@ -20,13 +21,13 @@ const Header = () => {
   return (
     <header className={visible ? "header active" : "header"}>
       <div className="container">
-        <a href="#home" className="logo">
+        <NavLink to="/" className="logo">
           <img
             src={logo}
             alt="logo"
             style={{ width: "160px", height: "50px" }}
           />
-        </a>
+        </NavLink>
 
         <Navbar />
       </div>

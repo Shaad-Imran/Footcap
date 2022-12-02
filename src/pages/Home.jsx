@@ -1,21 +1,21 @@
 import React from "react";
-import Collection from "../components/Collection";
 import Cta from "../components/Cta";
 import Hero from "../components/Hero";
 import InstaPost from "../components/InstaPost";
-import NikeSpecial from "../components/NikeSpecial";
+import BestSellers from "./BestSellers";
 import Products from "./Products";
 import Services from "./Services";
+import TodaySpecial from "./TodaySpecial";
 
 const Home = () => {
   return (
     <main>
       <article>
         <Hero />
-        <Collection />
         <Products />
+        <BestSellers />
         <Cta />
-        <NikeSpecial />
+        <TodaySpecial />
         <Services />
         <InstaPost />
       </article>

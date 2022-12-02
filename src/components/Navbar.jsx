@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { logo } from "../assets";
 import { navBarLinks, navActionList } from "../constants";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [menuIcon, setMenuIcon] = useState(false);
@@ -16,26 +17,26 @@ const Navbar = () => {
           <ion-icon name="close-outline"></ion-icon>
         </button>
 
-        <a href="#home" className="logo">
+        <NavLink to="/" className="logo">
           <img
             src={logo}
             alt="logo"
             style={{ width: "190px", height: "50px" }}
             onClick={() => setMenuIcon(false)}
           />
-        </a>
+        </NavLink>
 
         <ul className="navbar-list">
           {navBarLinks.map((link, index) => {
             return (
               <li className="navbar-item" key={index}>
-                <a
-                  href={link.id}
+                <NavLink
+                  to={link.path}
                   className="navbar-link"
                   onClick={() => setMenuIcon(false)}
                 >
                   {link.title}
-                </a>
+                </NavLink>
               </li>
             );
           })}
